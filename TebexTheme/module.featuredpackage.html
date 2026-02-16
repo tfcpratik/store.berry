@@ -1,0 +1,25 @@
+{% if module.display %}
+<div class="featured-module">
+    <div class="panel panel-default module">
+        <div class="panel-body">
+          <div class="featured-package">
+               <a href="javascript:void(0);" data-remote="/package/{{ module.package.id }}" class="toggle-modal">
+                   <div class="image">
+                    <img src="{{ module.package.image.url }}" class="toggle-tooltip {% if module.package.image.borderless %}img-rounded{% else %}img-thumbnail{% endif %}" title="{{ __("Click for more details") }}" />
+            </div>
+            
+            <div class="feat-text">
+                <div class="feat-desc">{{ module.header }}</div>
+                <div class="feat-pack">{{ module.package.name[:20] }}</div>
+            </div>
+            
+            <div class="feat-star">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            
+            </a>
+          </div>
+        </div>
+    </div>
+    </div>
+{% endif %}
